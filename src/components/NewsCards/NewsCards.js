@@ -7,6 +7,21 @@ import useStyles from "./styles.js";
 const NewsCards = ({ articles }) => {
   const classes = useStyles();
 
+  if (!articles.length) {
+    return (
+      <Grow in>
+        <Grid
+          className={classes.container}
+          container
+          alignItems="stretch"
+          spacing={3}
+        >
+          test
+        </Grid>
+      </Grow>
+    );
+  }
+
   return (
     <div>
       <Grow in>
